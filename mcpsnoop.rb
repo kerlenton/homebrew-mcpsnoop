@@ -5,21 +5,21 @@
 class Mcpsnoop < Formula
   desc "Wireshark for MCP: a transparent proxy and TUI for debugging MCP traffic"
   homepage "https://github.com/kerlenton/mcpsnoop"
-  version "0.6.0"
+  version "0.7.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kerlenton/mcpsnoop/releases/download/v0.6.0/mcpsnoop_0.6.0_darwin_amd64.tar.gz"
-      sha256 "1f62839bfe42da40df63d2e55a9dcf4b46e7dd3cf5552f08a5e92a803ec189c3"
+      url "https://github.com/kerlenton/mcpsnoop/releases/download/v0.7.0/mcpsnoop_0.7.0_darwin_amd64.tar.gz"
+      sha256 "52a906f151e07f0bcdfbdffc63563b9a9c10155394ef565785f5d46ededfa5a0"
 
       define_method(:install) do
         bin.install "mcpsnoop"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kerlenton/mcpsnoop/releases/download/v0.6.0/mcpsnoop_0.6.0_darwin_arm64.tar.gz"
-      sha256 "2a28b0cd83b64806951f7439e6077287481238254cc55b2a92c7972b49e5d162"
+      url "https://github.com/kerlenton/mcpsnoop/releases/download/v0.7.0/mcpsnoop_0.7.0_darwin_arm64.tar.gz"
+      sha256 "a4669983ddef5235c1b8c60a4e6aca9cdfd30e926a9b225f88e7438a9106a718"
 
       define_method(:install) do
         bin.install "mcpsnoop"
@@ -29,15 +29,15 @@ class Mcpsnoop < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kerlenton/mcpsnoop/releases/download/v0.6.0/mcpsnoop_0.6.0_linux_amd64.tar.gz"
-      sha256 "d1e934216d1018ebb82461f4d302c8fc64254fc84467c517fc305f89cfa17bbb"
+      url "https://github.com/kerlenton/mcpsnoop/releases/download/v0.7.0/mcpsnoop_0.7.0_linux_amd64.tar.gz"
+      sha256 "105284c801f540b1b5b9752de71ec79ba3f266c2635bb12293d9fdfe646cf09a"
       define_method(:install) do
         bin.install "mcpsnoop"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kerlenton/mcpsnoop/releases/download/v0.6.0/mcpsnoop_0.6.0_linux_arm64.tar.gz"
-      sha256 "0568f9ac3f989efe973864e97bfb5fdab2d7ed6722b1ff33fa6a105a1eb27859"
+      url "https://github.com/kerlenton/mcpsnoop/releases/download/v0.7.0/mcpsnoop_0.7.0_linux_arm64.tar.gz"
+      sha256 "819db467ac065af59b7e008d832192d772df312776b927cc88d071fd7e7196dd"
       define_method(:install) do
         bin.install "mcpsnoop"
       end
